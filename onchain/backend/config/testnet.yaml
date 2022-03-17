@@ -1,3 +1,0 @@
-blockchain:
-  http: "https://ropsten.infura.io/v3/91da48f64d454445bd31d0b4724bfbad"
-  ws: "wss://ropsten.infura.io/ws/v3/91da48f64d454445bd31d0b4724bfbad"
