@@ -21,7 +21,7 @@
   margin: 15px;
 }
 
-.item-wrapper {
+.items-wrapper {
   display: flex;
   flex-direction: row;
 }

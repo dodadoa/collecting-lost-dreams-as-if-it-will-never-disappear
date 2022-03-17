@@ -11,17 +11,12 @@ const App = () => {
   const [provider, setProvider] = useState(null);
 
   useEffect(() => {
-    const fetchItems = async () => {
-      const listItems = await fetchListItems()
-      const transformedItems = listItems.map((item) => ({
-        id: item.id,
-        price: item.ethereum_price,
-        owned: item.owned
-      }))
-      setItems(transformedItems)
-    }
-
-    fetchItems()
+    const listItems = [{
+      id: 1,
+      name: 'Lost dreams',
+      price: 300000000000000000,
+    }]
+    setItems(listItems)
   }, [])
 
   useEffect(() => {
@@ -34,7 +29,6 @@ const App = () => {
     
       try {
         const accounts = await ethereum.request({ method: "eth_requestAccounts" })
-        console.log(accounts[0])
         setCurrentAccount(accounts[0])
       } catch (error) {
         console.log(error)
@@ -46,16 +40,17 @@ const App = () => {
 
   useEffect(() => {
     const ethersProvider = getDefaultProvider("https://ropsten.infura.io/v3/91da48f64d454445bd31d0b4724bfbad")
-    const signer = ethersProvider.signer()
+    const signer = ethersProvider.signer
+    
     setProvider(signer)
   }, [])
 
   const handleSendTransaction = useCallback(async () => {
     if (!provider) return
 
-    await provider.setTransactions(
+    // await provider.setTransactions(
 
-    )
+    // )
   })
 
   const handlePurchasingItem = useCallback(async () => {
@@ -65,13 +60,14 @@ const App = () => {
   return (
     <div className="App">
       <p> account: {currentAccount}</p>
-      <div className="item-wrapper">
+      <div className="items-wrapper">
         {
           items.map((item) => {
             return (
               <Item
                 key={`item-${item.id}`}
                 id={item.id}
+                name={item.name}
                 price={item.price}
                 owned={item.owned}
                 handleClick={() => handlePurchasingItem(item.id)}

@@ -1,0 +1,3 @@
+blockchain:
+  http: "http://127.0.0.1:8545"
+  ws: "ws://localhost:8545"

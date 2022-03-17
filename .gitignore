@@ -1,2 +1,4 @@
-backend/target
-frontend/node_modules
+offchain/backend/target
+offchain/frontend/node_modules
+onchain/frontend/node_modules
+onchain/backend/target
