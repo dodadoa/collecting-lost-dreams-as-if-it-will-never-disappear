@@ -1,0 +1,50 @@
+.container {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.box-text {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.color-boomer {
+    background-color: #F27979;
+}
+.color-gen-x {
+    background-color: #FEBF7E;
+}
+.color-gen-y {
+    background-color: #FEFF7F;
+}
+.color-gen-z {
+    background-color: #7FFF7F;
+}
+
+.box-text-content {
+    font-family: Consolas;
+    font-weight: bold;
+    margin: 0;
+}
+
+.box-work {
+    background-color: #1A1A1A;
+    width: 80%;
+}
+
