@@ -4,7 +4,7 @@ import './Buy.css';
 const Buy = () => {
   return (
     <div className="container">
-      <h1 className="title">Home</h1>
+      <h1 className="title">Collecting Dreams As If It Will Never Disappear</h1>
       <div className="column">
         <div className="row">
           <div className="box-text color-boomer ">
