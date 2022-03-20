@@ -1,0 +1,52 @@
+   
+{
+  "name": "bot-invisible-hand",
+  "version": "1.0.0",
+  "description": "invisible hand at office",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-mac",
+    "start-pi": "ENVIRONMENT_DEV=pi npm-run-all clean transpile run-in-pi",
+    "run-in-pi": "DISPLAY=:0.0 TAIKO_BROWSER_PATH=/usr/bin/chromium-browser taiko --observe ./lib/index.js",
+    "start-mac": "ENVIRONMENT_DEV=mac npm-run-all clean transpile run-in-app",
+    "run-in-app": "taiko --observe ./lib/index.js",
+    "transpile": "babel ./src -d ./lib ",
+    "clean": "rimraf lib && rimraf images && mkdir images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodadoa/bot-wandering-in-street-view.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dodadoa/bot-wandering-in-street-view/issues"
+  },
+  "homepage": "https://github.com/dodadoa/bot-wandering-in-street-view#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "execa": "^4.1.0",
+    "gm": "^1.23.1",
+    "say": "^0.16.0",
+    "taiko": "1.0.25"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "esmodules": true
+          }
+        }
+      ]
+    ]
+  }
+}
