@@ -13,7 +13,7 @@ const App = () => {
           <Link className="nav-element" to="/"> Gallery  </Link>
           {/* <Link className="nav-element" to="/transactions"> Transactions </Link> */}
           {/* <Link className="nav-element" to="/chart"> Chart </Link> */}
-          <Link className="nav-element" to="/about"> About </Link>
+          {/*<Link className="nav-element" to="/about"> About </Link>*/}
           {/* <Link className="nav-element element-right" to="/login"> Login </Link> */}
         </nav>
         <Routes>
