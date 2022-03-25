@@ -5,11 +5,8 @@ pub enum Environment {
     #[strum(serialize = "local")]
     Local,
 
-    #[strum(serialize = "testnet")]
-    Testnet,
-
-    #[strum(serialize = "mainnet")]
-    Mainnet,
+    #[strum(serialize = "production")]
+    Production,
 
     #[strum(serialize = "test")]
     Test,

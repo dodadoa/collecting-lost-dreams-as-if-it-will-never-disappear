@@ -12,24 +12,10 @@ pub struct ApplicationSettings {
     pub host: String,
 }
 
-#[derive(Deserialize, Clone)]
-pub struct BlockchainSettings {
-    pub http: String,
-    pub ws: String,
-}
-
-#[derive(Deserialize, Clone)]
-pub struct WebsocketSettings {
-    #[serde(deserialize_with = "deserialize_number_from_string")]
-    pub port: u16,
-    pub host: String,
-}
 
 #[derive(Deserialize, Clone)]
 pub struct Settings {
     pub application: ApplicationSettings,
-    pub blockchain: BlockchainSettings,
-    pub websocket: WebsocketSettings,
 }
 
 pub fn get_configuration(environment: String) -> Result<Settings, config::ConfigError> {
