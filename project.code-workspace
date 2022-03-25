@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "bot"
+        },
+        {
+            "path": "offchain/frontend"
+        },
+        {
+            "path": "offchain/backend"
+        },
+        {
+            "path": "onchain/frontend"
+        }
+    ]
+}

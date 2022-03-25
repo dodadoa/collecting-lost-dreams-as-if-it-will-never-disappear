@@ -3,12 +3,10 @@ use actix_web::{App, HttpServer};
 use anyhow::Result;
 
 pub mod config;
-pub mod provider;
 
 use crate::config::setting::SETTINGS;
 
 pub async fn run_server() -> Result<()> {
-    provider::initialize().await?;
     HttpServer::new(move || {
         let cors = Cors::default()
             .allowed_origin("http://localhost:3000")
